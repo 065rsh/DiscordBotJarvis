@@ -1,4 +1,4 @@
-# Jarvis
+# J.A.R.V.I.S. (_Just A Rather Very Intelligent System_)
 Features on Cipher Hub Discord Community to have interactive introductory session with the User
 
 ## Some useful code blocks for bot.js 
