@@ -1,4 +1,4 @@
-# Jarvis
+# J.A.R.V.I.S. (_Just A Rather Very Intelligent System_)
 Features on Cipher Hub Discord Community to have interactive introductory session with the User
 
 ## Some useful code blocks for bot.js 
@@ -12,4 +12,8 @@ let replies = JSON.parse(fs.readFileSync('replies.json'));
 - Send DM to new guild member
 ```
 client.users.get(member.id).send(`Hi ${member.user.username}, ${replies.new_member}`);
+```
+- Write member name without '__@__'
+```
+${member.author.username}
 ```
