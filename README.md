@@ -13,3 +13,7 @@ let replies = JSON.parse(fs.readFileSync('replies.json'));
 ```
 client.users.get(member.id).send(`Hi ${member.user.username}, ${replies.new_member}`);
 ```
+- Write member name without '__@__'
+```
+${member.author.username}
+```
