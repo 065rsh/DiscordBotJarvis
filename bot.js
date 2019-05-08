@@ -17,16 +17,27 @@ client.on('ready', () => {
 
 // reading the file -> parsing it in JSON format -> saving it in a variable
 let replies = JSON.parse(fs.readFileSync('replies.json')); 
-
+let topicBreak = "\n-------------\n";
 // Create an event listener for new guild members
-client.on('guildMemberAdd', member => {
-  // Send the message to a designated channel on a server:
-  // const channel = member.guild.channels.find(ch => ch.name === 'member-log');
-  // // // Do nothing if the channel wasn't found on this server
-  // if (!channel) return;
+client.on('message', message => {
   // Send the message, mentioning the member
-  client.users.get(member.id).send(`Hi ${member.user.username}, ${replies.new_member}`);
-  // message.channel.send(`Hi ${member}, ${replies.new_member}`);
+  let msg = message.content;
+  let user = message.author.id;
+  let username = message.author.username;
+  switch (msg){
+    case "!commands":
+      client.users.get(user).send(`${replies.commands}`);
+      break;
+    case "-new_member":
+      client.users.get(user).send(`.\n\n\nHi ${username}, Welcome to the Cipher Hub discord chat!\n\n${replies.new_member}`);
+      break;
+    case "!about":
+      break;
+  }
+});
+client.on('guildMemberAdd', member => {
+  // console.log(member.id);
+  client.users.get(member.id).send(`Hi ${member.user.username}, Welcome to the Cipher Hub discord chat!\n\n${replies.new_member}`);
 });
 
 // Log our bot in using the token from https://discordapp.com/developers/applications/me
