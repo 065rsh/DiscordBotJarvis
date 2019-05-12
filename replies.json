@@ -1,4 +1,34 @@
 {
-    "new_member":"***Here you can chat in real-time with other members of the Cipher Hub community, ask questions & offer support.***\n-------------\nAs per your role, you will have permission to read, write or view channels. Roles are distributed as following:\n1.  Ciphers: Working in the Management team for this Guild\n2. Hub Members: Shares ownership for the application they are working on\n3. Volunteers: Volunteering in the application to enhance their skills\n-------------\n#welcome channel under DISCUSSION HUB category is to introduce yourself in any way that you like and start interacting with other members on different channels. Under this category, discussions can be outside the project also.\nMembers to the guild are only invited by Ciphers, so believe in others when they accept the task.\n-------------\nYou can always DM Jarvis to aid you with multiple kind of information. Start by texting him `!commands`",
-    "commands":"*Every command for Jarvis start with `!`*\n\n`about`: will inform you about the Guild(Server)"
+    "welcomeNote":[
+        ", Welcome to the Cipher Hub discord community. I'm Just A Rather Very Intelligent System(a.k.a Jarvis), allow me to introduce this guild:"
+    ],
+    "about": [
+        "***Here you can chat in real-time with other members of the Cipher Hub community, ask questions & offer support.***",
+        "\n-------------\n",
+        ""
+    ],
+    "commands": [
+        "**Every command for Jarvis starts with `!`**\n",
+        "`!about`: will inform you about the Guild(Server)",
+        "`!rules`: display rules followed by this guild",
+        "`!tips`: to aid developers with some tricks",
+        "`!channels`: will give brief on basic channels",
+        "`!roles`: brief on every role and their respective permissions"
+    ],
+    "roles": [
+        "**As per your role, you will have permission to read, write or view channels:**\n",
+        "1.  Ciphers: Working in the Management team for this Guild",
+        "2. Hub Members: Shares ownership for the application they are working on",
+        "3. Volunteers: Volunteering in the application to enhance their skills"
+    ],
+    "rules": [
+        "**As to maintain quality interaction between guild members, following rules are to be maintained:**\n",
+        "1. Do not spam the server in anyway",
+        "2. Any information shared must be verified first"
+    ],
+    "tips": [
+        "**Tips can help your team have a good sync and prepare you as a developer:**\n",
+        "1. Commit you changes or make Pull Requests(PR) with appropiate comments",
+        "2. Keep the IDE up-to-date, so that everyone in the team can add files, extension or dependencies on free will."
+    ]
 }

@@ -1,10 +1,4 @@
-/**
- * A bot that welcomes new guild members when they join
- */
-
-// Import the discord.js module
 const Discord = require('discord.js');
-// Import the readFileSync function from Node.js
 const fs = require('fs');
 
 // Create an instance of a Discord client
@@ -15,29 +9,33 @@ client.on('ready', () => {
   console.log('I am ready!');
 });
 
+printAppender = (lineArray) => {
+  finalString = "";
+  lineArray.forEach(function(line) {
+    finalString += line + "\n";
+  });
+  return finalString.slice(0, -2);
+}
+
 // reading the file -> parsing it in JSON format -> saving it in a variable
-let replies = JSON.parse(fs.readFileSync('replies.json')); 
-let topicBreak = "\n-------------\n";
-// Create an event listener for new guild members
+let replies = JSON.parse(fs.readFileSync('replies.json'));
+
 client.on('message', message => {
-  // Send the message, mentioning the member
   let msg = message.content;
-  let user = message.author.id;
-  let username = message.author.username;
-  switch (msg){
-    case "!commands":
-      client.users.get(user).send(`${replies.commands}`);
-      break;
-    case "-new_member":
-      client.users.get(user).send(`.\n\n\nHi ${username}, Welcome to the Cipher Hub discord chat!\n\n${replies.new_member}`);
-      break;
-    case "!about":
-      break;
+  let user = message.author.id; // saves the id of the user to whom this personal will be sent to
+
+  if(msg.startsWith('!') && message.channel.name == undefined) {
+    var reply = eval("replies." + msg.slice(1));  // remove '!' and makes reply = replies.commandName;
+
+    if(replies.hasOwnProperty(msg.slice(1)))  // check whether the JSON key is available
+      client.users.get(user).send(printAppender(reply));  // printAppender will fetch line wise from JSON file
+    else
+      client.users.get(user).send("Command error! \tType `!commands` to have a look at available commands.");
   }
 });
+
 client.on('guildMemberAdd', member => {
-  // console.log(member.id);
-  client.users.get(member.id).send(`Hi ${member.user.username}, Welcome to the Cipher Hub discord chat!\n\n${replies.new_member}`);
+  client.users.get(member.id).send(`Hello ${member.user.username}${replies.welcomeNote}\n\n${replies.about}`);
 });
 
 // Log our bot in using the token from https://discordapp.com/developers/applications/me
