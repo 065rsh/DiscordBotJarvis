@@ -35,7 +35,7 @@ client.on('message', message => {
 });
 
 client.on('guildMemberAdd', member => {
-  client.users.get(member.id).send(`Hello ${member.user.username}${replies.welcomeNote}\n\n${replies.about}`);
+  client.users.get(member.id).send(`Welcome ${member.user.username}${replies.welcomeNote}\n\n${printAppender(replies.about)}`);
 });
 
 // Log our bot in using the token from https://discordapp.com/developers/applications/me

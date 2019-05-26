@@ -1,34 +1,43 @@
 {
-    "welcomeNote":[
-        ", Welcome to the Cipher Hub discord community. I'm Just A Rather Very Intelligent System(a.k.a Jarvis), allow me to introduce this guild:"
+    "welcomeNote": [
+        ", this is Jarvis! Let me tell you something about this guild..."
     ],
     "about": [
         "***Here you can chat in real-time with other members of the Cipher Hub community, ask questions & offer support.***",
-        "\n-------------\n",
-        ""
+        "-------------",
+        "",
+        "-------------",
+        "Let's have a conversation then, you can reply with `!commands` to know about my commands."
     ],
     "commands": [
-        "**Every command for Jarvis starts with `!`**\n",
+        "**My commands will always start with `!`. Below are the following commands to which I can reply:**\n",
         "`!about`: will inform you about the Guild(Server)",
         "`!rules`: display rules followed by this guild",
         "`!tips`: to aid developers with some tricks",
         "`!channels`: will give brief on basic channels",
-        "`!roles`: brief on every role and their respective permissions"
+        "`!roles`: brief on every role and their respective permissions",
+        "`!products`: will list all the products ever created by Cipher Hub"
     ],
     "roles": [
         "**As per your role, you will have permission to read, write or view channels:**\n",
-        "1.  Ciphers: Working in the Management team for this Guild",
+        "1. Ciphers: Working in the Management team for this Guild",
         "2. Hub Members: Shares ownership for the application they are working on",
         "3. Volunteers: Volunteering in the application to enhance their skills"
     ],
     "rules": [
-        "**As to maintain quality interaction between guild members, following rules are to be maintained:**\n",
+        "**Just , following rules are to be maintained:**\n",
         "1. Do not spam the server in anyway",
-        "2. Any information shared must be verified first"
+        "2. Any information shared must be verified first",
+        "3. You'll have three strikes to fail to submit your task in one year",
+        "4. "
     ],
     "tips": [
         "**Tips can help your team have a good sync and prepare you as a developer:**\n",
         "1. Commit you changes or make Pull Requests(PR) with appropiate comments",
         "2. Keep the IDE up-to-date, so that everyone in the team can add files, extension or dependencies on free will."
+    ],
+    "products": [
+        "**Below is the complete list of products by Cipher Hub:**\n",
+        "1. Notes Application: in progress..."
     ]
 }
